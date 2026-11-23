@@ -11,10 +11,9 @@ phases:
       - pip install pytest pytest-cov
   build:
     commands:
-      - echo Running tests...
-      - pytest tests/ --cov=app --cov-report=xml # Add cov-report flag here
+      - echo Running tests... 
       - export PYTHONPATH=.
-      - pytest tests/ --cov=app
+      - pytest tests/ --cov=app --cov-report=xml
       - echo Building the application...
       - pip install wheel
       - python setup.py bdist_wheel
